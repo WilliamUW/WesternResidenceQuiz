@@ -333,14 +333,13 @@ Template Used: Dimension by HTML5 UP
 
                         var roomV = document.getElementById("roomStyle").value;
                         if (roomV == "Traditional Style Rooms") {
-                            v1++;
-                            rev++;
-                            cmh++;
+                            addPoints([0,1,2], 3);
+                        }
+                        else if (roomV == "Hybrid Style Rooms") {
+                            addPoints([3,4,5], 3);
                         }
                         else if (roomV == "Suite Style Rooms") {
-                            mkv++;
-                            uwp++;
-                            clv++;
+                            addPoints([6,7,8,9,10], 3);
                         }
                         list = list + roomV;
 
@@ -498,12 +497,7 @@ Template Used: Dimension by HTML5 UP
                             score: clv
                         };
 
-                        myArray.push(v1array);
-                        myArray.push(revarray);
-                        myArray.push(cmharray);
-                        myArray.push(mkvarray);
-                        myArray.push(uwparray);
-                        myArray.push(clvarray);
+               
 
                         for (const i in points) {
                             var currentRes = {
@@ -524,13 +518,15 @@ Template Used: Dimension by HTML5 UP
                         myArray.sort(compareScoreFunction);
                         var dup = myArray;
 
+                        console.log(myArray);
+                        console.log(myArray.at(0));
 
-                        document.getElementById('first').innerHTML = "1. " + myArray.pop().name;
-                        document.getElementById('second').innerHTML = "2. " + myArray.pop().name;
-                        document.getElementById('third').innerHTML = "3. " + myArray.pop().name;
-                        document.getElementById('fourth').innerHTML = "4. " + myArray.pop().name;
-                        document.getElementById('fifth').innerHTML = "5. " + myArray.pop().name;
-                        document.getElementById('sixth').innerHTML = "6. " + myArray.pop().name;
+                        document.getElementById('first').innerHTML = "1. " + myArray.at(0).name;
+                        document.getElementById('second').innerHTML = "2. " + myArray.at(1).name;
+                        document.getElementById('third').innerHTML = "3. " + myArray.at(2).name;
+                        document.getElementById('fourth').innerHTML = "4. " + myArray.at(3).name;
+                        document.getElementById('fifth').innerHTML = "5. " + myArray.at(4).name;
+                        document.getElementById('sixth').innerHTML = "6. " + myArray.at(5).name;
 
 
                         //myArray = dup;
