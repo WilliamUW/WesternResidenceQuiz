@@ -160,12 +160,11 @@ Template Used: Dimension by HTML5 UP
                 </form>
 
                 <form>
-                    If You Chose Suite, Select Your Preferred Room Type:
+                    Select Your Preferred Bed Size:
                     <select id="suiteType">
                         <option value="na">N/A</option>
-                        <option value="2-Bedroom Suite">2-Bedroom Suites</option>
-                        <option value="3-Bedroom Suite">3-Bedroom Suites</option>
-                        <option value="4-Bedroom Suite">4-Bedroom Suites</option>
+                        <option value="Single">Single</option>
+                        <option value="Double">Double</option>
                     </select>
                 </form>
 
@@ -344,39 +343,23 @@ Template Used: Dimension by HTML5 UP
                         list = list + roomV;
 
                         var suiteT = document.getElementById("suiteType").value;
-                        if (suiteT == "na") {
-
-                        }
-                        else {
-                            if (roomT == "2-Bedroom Suites") {
-                                uwp++;
+                       
+                            if (roomT == "Single") {
+                                addPoints([0,1,2,3,4,5,7,8],2);
                             }
-                            else if (roomT == "3-Bedroom Suites") {
-                                uwp++;
+                            else if (roomT == "Double") {
+                                addPoints([6,9,10],2);
                             }
-                            else if (roomT == "4-Bedroom Suites") {
-                                mkv++;
-                                uwp++;
-                                clv++;
-                            }
-                            list = list + ", " + suiteT;
-                        }
+                       
+                            list = list + ", " + suiteT + ' Bed Size';
+                        
 
                         var roomT = document.getElementById("roomType").value;
                         if (roomT == "Single Rooms") {
-                            v1++;
-
-                            cmh++;
-
-                            mkv++;
-                            uwp++;
-                            clv++;
+                            addPoints([0,1,2,3,4,5,7,8],2);
                         }
                         else if (roomT == "Double Rooms") {
-                            v1++;
-                            rev++;
-
-                            uwp++;
+                            addPoints([0,1,2,3,4,5,7,8],2);
                         }
                         list = list + ", " + roomT;
 
