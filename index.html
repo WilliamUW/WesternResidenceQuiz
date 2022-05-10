@@ -1,0 +1,637 @@
+<!DOCTYPE HTML>
+<!--
+Created by William Wang
+Template Used: Dimension by HTML5 UP
+-->
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+
+
+
+
+
+    <title>Accommodate Me Mr. Goose</title>
+    <link rel="icon" href="thankmrgoose.jpg">
+    <style>
+        .button-hover {
+            position: relative;
+            min-width: 200px;
+            margin: 1em;
+            padding: 0.5em;
+            background: linear-gradient(to right, #56ccf2, #2f80ed);
+            border: 0;
+            cursor: pointer;
+            border-radius: 20px;
+
+        }
+
+        .button-hover::before,
+        .button-hover::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: linear-gradient(to right, #56ccf2, #2f80ed);
+            border-radius: 20px;
+            transition: all .5s ease-in-out;
+        }
+
+        .button-hover:hover::before {
+            filter: blur(5px);
+        }
+
+        .button-hover:hover::after {
+            filter: blur(15px);
+        }
+
+        .button-hover:hover {
+            animation: hue 3s linear infinite;
+        }
+
+        @keyframes hue {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        .button-hover span {
+            position: relative;
+            z-index: 3;
+            display: block;
+            padding: 0.5em;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2em;
+            color: white;
+            background-color: #2c2e36;
+            border-radius: 17px;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+
+            <div class="content">
+                <div class="inner">
+                    <h1 style="padding: 10px;
+                                   background: rgba(0, 0, 0, 0.6);">Accommodate Me Mr. Goose<em>&#x2122</em>
+                        &#129414&#129442</h1>
+                    <h3 style="padding: 10px;
+                                     background: rgba(0, 0, 0, 0.6);">Unsure on which residence to choose? <br>Let Mr.
+                        Goose help!</h3>
+                    <p style="padding: 10px;
+                            background: rgba(0, 0, 0, 0.6);"> Click "Start!" to begin answering the questions and Mr.
+                        Goose will suggest a residence based on your response. <br> Also, feel free to check out the <a
+                            href="https://williamuw.github.io/ChanceMeMrGoose/">Admissions Chance Calculator</a> brought
+                        to you by Mr. Goose.</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">
+                            <h1><em>Start!</em></h1>
+                        </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Intro -->
+            <article id="intro">
+                <h2 class="major">Mr. Goose's Residence Quiz</h2>
+
+                <span class="image main"><img src="trio-ringroad-qnc-slc-fall.jpg" alt="goose" /></span>
+
+
+
+                <p>Mr. Goose will help to suggest residences that match you according to your preferences below.</p>
+
+                <form>
+                    Which Faculty Are You Planning to Attend:
+                    <select id="faculty">
+                        <option value="na">Doesn't Matter</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Math">Math</option>
+                        <option value="Arts">Arts</option>
+                        <option value="Science">Science</option>
+                        <option value="Environment">Environment</option>
+                        <option value="Applied Health Sciences">Applied Health Sciences</option>
+                    </select>
+                </form>
+
+                <form>
+                    Select Your Preferred Meal Plan:
+                    <select id="mealPlan">
+                        <option value="na">Doesn't Matter</option>
+                        <option value="mandatory">Mandatory Meal Plan</option>
+                        <option value="optional">Optional or No Meal Plan</option>
+                    </select>
+                </form>
+
+                <form>
+                    Select Your Preferred Room Style:
+                    <select id="roomStyle">
+                        <option value="Traditional Style Rooms">Traditional Style Rooms</option>
+                        <option value="Hybrid Style Rooms">Hybrid Style Rooms</option>
+                        <option value="Suite Style Rooms">Suite Style Rooms</option>
+                    </select>
+                </form>
+
+                <form>
+                    If You Chose Suite, Select Your Preferred Room Type:
+                    <select id="suiteType">
+                        <option value="na">N/A</option>
+                        <option value="2-Bedroom Suite">2-Bedroom Suites</option>
+                        <option value="3-Bedroom Suite">3-Bedroom Suites</option>
+                        <option value="4-Bedroom Suite">4-Bedroom Suites</option>
+                    </select>
+                </form>
+
+                <form>
+                    Select Your Preferred Room Type:
+                    <select id="roomType">
+                        <option value="Single Rooms">Single Rooms</option>
+                        <option value="Double Rooms">Double Rooms</option>
+                    </select>
+                </form>
+
+                <form>
+                    If You Chose Double Room, Select Your Preferred Room Type:
+                    <select id="doubleType">
+                        <option value="na">N/A </option>
+                        <option value="normal">Normal Double Rooms</option>
+                        <option value="Semi-Private Double Rooms">Semi-Private Double Rooms</option>
+                        <option value="Interconnecting Rooms">Interconnecting Rooms</option>
+                    </select>
+                </form>
+
+                <form>
+                    Select Your Preferred Floor Type:
+                    <select id="floorType">
+                        <option value="Single-Gender Floors">Single-Gender Floors</option>
+                        <option value="Co-ed Floors">Co-ed Floors</option>
+                    </select>
+                </form>
+
+                <h4>Features and Amenities(Skip if not necessary): </h4>
+
+                <form>
+                    On-Site Eatery or Grocery Shuttle:
+                    <select id="eatery">
+                        <option value="On-Site Eatery">On-Site Eatery</option>
+                        <option value="Grocery Shuttle">Grocery Shuttle</option>
+                    </select>
+                </form>
+
+                <form>
+                    Air Conditioning:
+                    <select id="ac">
+                        <option value="no">No</option>
+                        <option value="Air Conditioning">Yes</option>
+                    </select>
+                </form>
+
+                <form>
+                    On-Site Fitness Room:
+                    <select id="fitness">
+                        <option value="no">No</option>
+                        <option value="On-Site Fitness Room">Yes</option>
+                    </select>
+                </form>
+
+                <form>
+                    On-Site Music/Multi-Faith Room:
+                    <select id="music">
+                        <option value="no">No</option>
+                        <option value="On-Site Music/Multi-Faith Room">Yes</option>
+                    </select>
+                </form>
+
+                <center>
+                    <p>Click the button for Mr. Goose to suggest you a residence.</p>
+
+                    <button class="button-hover" onclick="myFunction()">
+                        <span id="calcbutton" STYLE="font-family:'Source Sans Pro'">Calculate!
+                        </span>
+                    </button>
+                </center>
+
+                <br />
+
+                <em>
+                    <h2 style="padding: 0px;" id="calculating"></h2>
+                </em>
+
+                <h1 id="first"></h1>
+                <h2 id="second"></h2>
+                <h3 id="third"></h3>
+                <h4 id="fourth"></h4>
+                <h5 id="fifth"></h5>
+                <h6 id="sixth"></h6>
+
+                <strong>
+                    <p id="firstdescription"></p>
+                </strong>
+                <p id="firstdescriptiondetailed"></p>
+                <p id="facultydisplay"></p>
+
+                <p id="mealplandisplay"></p>
+
+                <p id="demo"></p>
+
+                <p id="amenities"></p>
+
+                <p id="rankings"></p>
+
+                <p id="rankings2"></p>
+
+                <p id="rankings3"></p>
+
+
+                <span class="image main"><img src="bg.png" alt="campus" /></span>
+
+                <p id="reference"><strong>Please refer to Waterloo's <a
+                            href="https://uwaterloo.ca/housing/residences/compare-residences">Compare Residences
+                            page</a> to review the suggestions calculated by Mr. Goose.</strong> The Residence Rankings
+                    calculated on this website are only based on the recorded responses. It does not take into account
+                    the importance of certain preferences. Thus, please review Waterloo's webpage as well for the most
+                    up-to-date and complete information regarding your First-Year residence choices before coming to a
+                    conclusion. Thank you for visiting!</p>
+
+
+
+                <script>
+
+
+                    var buildings = ['Delaware Hall', 'Medway-Sydenham Hall', 'Saugeen-Maitland Hall', 'Bayfield Hall', 'Ontario Hall', 'Perth Hall', 'Alumni House', 'Elgin Hall', 'Essex Hall', 'Lambton Hall', 'London Hall'];
+                    var points = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+                    function addPoints(indices, pointsAdded) {
+                        for (const i of indices) {
+                            console.log(i);
+                            points[i] += pointsAdded;
+                        }
+
+                    }
+
+                    function myFunction() {
+                        document.getElementById("calculating").innerHTML = "Your Residence Rankings: ";
+                        var list = "You Prefer: ";
+                        var v1 = 0;
+                        var rev = 0;
+                        var cmh = -1;
+                        var mkv = 0;
+                        var uwp = 0;
+                        var clv = 1;
+                        var facc = "Your Faculty is: ";
+                        var fac = document.getElementById("faculty").value;
+                        if (fac == "na") {
+                            facc = facc + "Unspecified";
+                        }
+                        else {
+                            facc = facc + " " + fac;
+                        }
+                        document.getElementById('facultydisplay').innerHTML = facc;
+                        
+
+                        var meal = document.getElementById("mealPlan").value;
+                        var mealdisplayvalue = "Preferred Meal Plan: ";
+                        if (meal == "mandatory") {
+                            mealdisplayvalue = mealdisplayvalue + "Mandatory Meal Plan";
+                        }
+                        else if (meal == "optional") {
+                            addPoints([3,9], 3);
+                            mealdisplayvalue = mealdisplayvalue + "Optional or No Meal Plan";
+                        }
+                        else
+                            mealdisplayvalue = mealdisplayvalue + "No Preference";
+
+                        document.getElementById('mealplandisplay').innerHTML = mealdisplayvalue;
+
+
+                        var roomV = document.getElementById("roomStyle").value;
+                        if (roomV == "Traditional Style Rooms") {
+                            v1++;
+                            rev++;
+                            cmh++;
+                        }
+                        else if (roomV == "Suite Style Rooms") {
+                            mkv++;
+                            uwp++;
+                            clv++;
+                        }
+                        list = list + roomV;
+
+                        var suiteT = document.getElementById("suiteType").value;
+                        if (suiteT == "na") {
+
+                        }
+                        else {
+                            if (roomT == "2-Bedroom Suites") {
+                                uwp++;
+                            }
+                            else if (roomT == "3-Bedroom Suites") {
+                                uwp++;
+                            }
+                            else if (roomT == "4-Bedroom Suites") {
+                                mkv++;
+                                uwp++;
+                                clv++;
+                            }
+                            list = list + ", " + suiteT;
+                        }
+
+                        var roomT = document.getElementById("roomType").value;
+                        if (roomT == "Single Rooms") {
+                            v1++;
+
+                            cmh++;
+
+                            mkv++;
+                            uwp++;
+                            clv++;
+                        }
+                        else if (roomT == "Double Rooms") {
+                            v1++;
+                            rev++;
+
+                            uwp++;
+                        }
+                        list = list + ", " + roomT;
+
+
+
+                        var doubleTypeV = document.getElementById("doubleType").value;
+                        if (doubleTypeV == "na" || doubleTypeV == "normal") {
+                            v1++;
+                            rev++;
+                            uwp++;
+                        }
+                        else {
+                            if (doubleTypeV == "Semi-Private Double Rooms") {
+                                cmh++;
+                            }
+                            else if (doubleTypeV == "Interconnecting Rooms	") {
+                                v1++;
+                            }
+                            list = list + ", " + doubleTypeV;
+
+                        }
+
+                        var fl = document.getElementById("floorType").value;
+                        if (fl == "Single-Gender Floor") {
+                            v1++;
+                            clv++;
+                        }
+                        else {
+                            rev++;
+                            cmh++;
+                            mkv++;
+                            uwp++;
+                        }
+                        list = list + ", " + fl;
+
+                        // features
+                        var features = "Your Preferred Features and Amenities: ";
+
+                        var eateryvalue = document.getElementById("eatery").value;
+                        if (eateryvalue == "On-Site Eatery") {
+                            v1++;
+                            rev++;
+                            cmh++;
+                        }
+                        else {
+                            mkv++;
+                            uwp++;
+                            clv++;
+                        }
+
+                        features = features + eateryvalue;
+
+                        var acvalue = document.getElementById("ac").value;
+
+                        if (acvalue == "no") {
+
+                        }
+                        else {
+                            cmh++;
+                            mkv++;
+                            features = features + ", " + acvalue;
+                        }
+
+                        var fit = document.getElementById("fitness").value;
+
+                        if (fit == "no") {
+
+                        }
+                        else {
+                            rev++; cmh++;
+                            features = features + ", " + fit;
+                        }
+
+                        var mus = document.getElementById("music").value;
+
+                        if (mus == "no") { }
+                        else {
+                            cmh++; v1++;
+                            features = features + ", " + mus;
+                        }
+
+
+                        document.getElementById('demo').innerHTML = list;
+
+                        document.getElementById('amenities').innerHTML = features;
+                        let residencePrint = "";
+                        for (const i in points) {
+                            residencePrint += buildings[i] + ': ';
+                            residencePrint += points[i] + ', ';
+                        }
+                        document.getElementById('rankings3').innerHTML = "The Individual Scores --- V1: " + residencePrint;
+
+
+
+                        var myArray = [];
+                        var v1array = {
+                            name: "V1",
+                            score: v1
+                        };
+                        var revarray = {
+                            name: "REV",
+                            score: rev
+                        };
+                        var cmharray = {
+                            name: "CMH",
+                            score: cmh
+                        };
+                        var mkvarray = {
+                            name: "MKV",
+                            score: mkv
+                        };
+                        var uwparray = {
+                            name: "UWP",
+                            score: uwp
+                        };
+                        var clvarray = {
+                            name: "CLV",
+                            score: clv
+                        };
+
+                        myArray.push(v1array);
+                        myArray.push(revarray);
+                        myArray.push(cmharray);
+                        myArray.push(mkvarray);
+                        myArray.push(uwparray);
+                        myArray.push(clvarray);
+
+                        for (const i in points) {
+                            var currentRes = {
+                                name: buildings[i],
+                                scores: points[i]
+                            }
+                            myArray.push(currentRes);
+                        }
+
+
+                        function compareScoreFunction(a, b) {
+                            if (a.score < b.score) { return -1; }
+                            if (a.score > b.score) { return 1; }
+                            return 0;
+                        }
+
+
+                        myArray.sort(compareScoreFunction);
+                        var dup = myArray;
+
+
+                        document.getElementById('first').innerHTML = "1. " + myArray.pop().name;
+                        document.getElementById('second').innerHTML = "2. " + myArray.pop().name;
+                        document.getElementById('third').innerHTML = "3. " + myArray.pop().name;
+                        document.getElementById('fourth').innerHTML = "4. " + myArray.pop().name;
+                        document.getElementById('fifth').innerHTML = "5. " + myArray.pop().name;
+                        document.getElementById('sixth').innerHTML = "6. " + myArray.pop().name;
+
+
+                        //myArray = dup;
+                        myArray.push(v1array);
+                        myArray.push(revarray);
+                        myArray.push(cmharray);
+                        myArray.push(mkvarray);
+                        myArray.push(uwparray);
+                        myArray.push(clvarray);
+
+
+
+                        myArray.sort(compareScoreFunction);
+                        var first = myArray.pop()
+                        var firstChoice = first.name;
+                        var firstString = "Mr. Goose suggests you to check out: " + firstChoice + "! ";
+                        var resdes = "";
+
+                        switch (firstChoice) {
+                            case "V1":
+                                resdes = "Village 1 (V1) was the first residence built for students at the University of Waterloo. With a long history, it is here where many first-year students will call home.";
+                                break;
+                            case "REV":
+                                resdes = "Ron Eydt Village (REV) is a first-year exclusive residence, with plenty of social and academic programming to make your first year in residence a memorable one!";
+                                break;
+                            case "CMH":
+                                resdes = "Claudette Millar Hall (CMH) is located in the heart of UW Place and offers single and semi-private double rooms, plenty of study space, and a variety of dining options.";
+                                break;
+
+                            case "MKV":
+                                resdes = "Mackenzie King Village (MKV) offers the privacy of having a single room combined with the social benefits of living in a shared suite. Students also have a kitchen in their suite to prepare their own meals.";
+                                break;
+                            case "UWP":
+                                resdes = "UW Place (UWP) is centrally located to campus, Waterloo Park, a new LRT station, and University Plaza. Students living at UWP enjoy the independence and privacy of their own room, combined with the perks of apartment living.";
+                                break;
+                            case "CLV":
+                                resdes = "Columbia Lake Village South (CLV-South) is a vibrant community with a diverse population of students in different stages of their academic career. Rooms are fully furnished.";
+                                break;
+                            default:
+                                resdes = "";
+                                break;
+
+
+                        }
+                        document.getElementById('firstdescription').innerHTML = firstString + resdes;
+
+                        document.getElementById("calcbutton").innerHTML = "Calculate Again!";
+
+                        var print = "The Rankings in Order with Score --- ";
+
+                        myArray.push(first);
+                        myArray.sort(compareScoreFunction);
+
+                        for (var i = 0; i < 6; i++) {
+                            if (i == 5) {
+                                var c = myArray.pop();
+                                print = print + c.name + ": " + c.score;
+                            }
+                            else {
+                                var c = myArray.pop();
+                                print = print + c.name + ": " + c.score + ", ";
+                            }
+                        }
+
+
+
+                        document.getElementById('rankings2').innerHTML = print;
+
+
+
+
+
+
+
+                    }
+
+
+
+
+                </script>
+            </article>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright">&copy; William Wang 2021 <br> Website Template provided by <a
+                    href="https://html5up.net">HTML5 UP</a>.</p>
+        </footer>
+
+    </div>
+
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
