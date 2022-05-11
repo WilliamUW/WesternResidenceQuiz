@@ -19,7 +19,7 @@ Template Used: Dimension by HTML5 UP
 
 
 
-    <title>Accommodate Me Mr. Goose</title>
+    <title>Western Residence Quiz</title>
     <link rel="icon" href="thankmrgoose.jpg">
     <style>
         .button-hover {
@@ -94,7 +94,7 @@ Template Used: Dimension by HTML5 UP
             <div class="content">
                 <div class="inner">
                     <h1 style="padding: 10px;
-                                   background: rgba(0, 0, 0, 0.6);">Accommodate Me Mr. Goose<em>&#x2122</em>
+                                   background: rgba(0, 0, 0, 0.6);">Western Residence Quiz<em>&#x2122</em>
                         &#129414&#129442</h1>
                     <h3 style="padding: 10px;
                                      background: rgba(0, 0, 0, 0.6);">Unsure on which residence to choose? <br>Let Mr.
@@ -120,15 +120,15 @@ Template Used: Dimension by HTML5 UP
 
             <!-- Intro -->
             <article id="intro">
-                <h2 class="major">Mr. Goose's Residence Quiz</h2>
+                <h2 class="major">Western Residence Quiz</h2>
 
                 <span class="image main"><img src="trio-ringroad-qnc-slc-fall.jpg" alt="goose" /></span>
 
 
 
-                <p>Mr. Goose will help to suggest residences that match you according to your preferences below.</p>
+                <p>Residences will be suggested that match you according to your preferences below.</p>
 
-                <form>
+                <!-- <form>
                     Which Faculty Are You Planning to Attend:
                     <select id="faculty">
                         <option value="na">Doesn't Matter</option>
@@ -139,17 +139,9 @@ Template Used: Dimension by HTML5 UP
                         <option value="Environment">Environment</option>
                         <option value="Applied Health Sciences">Applied Health Sciences</option>
                     </select>
-                </form>
+                </form> -->
 
-                <form>
-                    Select Your Preferred Meal Plan:
-                    <select id="mealPlan">
-                        <option value="na">Doesn't Matter</option>
-                        <option value="mandatory">Mandatory Meal Plan</option>
-                        <option value="optional">Optional or No Meal Plan</option>
-                    </select>
-                </form>
-
+                <!-- done -->
                 <form>
                     Select Your Preferred Room Style:
                     <select id="roomStyle">
@@ -159,6 +151,45 @@ Template Used: Dimension by HTML5 UP
                     </select>
                 </form>
 
+                <!-- done -->
+                <form>
+                    Select Your Preferred Meal Plan:
+                    <select id="mealPlan">
+                        <option value="na">Doesn't Matter</option>
+                        <option value="mandatory">Mandatory Meal Plan</option>
+                        <option value="optional">Optional or No Meal Plan</option>
+                    </select>
+                </form>
+
+                <!-- done -->
+                <form>
+                    In-Building Dining Hall:
+                    <select id="eatery">
+                        <option value="On-Site Eatery">Yes</option>
+                        <option value="Grocery Shuttle">No</option>
+                    </select>
+                </form>
+
+                <!-- done -->
+                <form>
+                    In-Suite Washroom:
+                    <select id="In-Suite Washroom">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </form>
+
+                <form>
+                    In-Suite Kitchen:
+                    <select id="kitchen">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </form>
+
+                
+
+                <!-- done -->
                 <form>
                     Select Your Preferred Bed Size:
                     <select id="suiteType">
@@ -200,13 +231,7 @@ Template Used: Dimension by HTML5 UP
 
                 <h4>Features and Amenities(Skip if not necessary): </h4>
 
-                <form>
-                    On-Site Eatery or Grocery Shuttle:
-                    <select id="eatery">
-                        <option value="On-Site Eatery">On-Site Eatery</option>
-                        <option value="Grocery Shuttle">Grocery Shuttle</option>
-                    </select>
-                </form>
+                
 
                 <form>
                     Air Conditioning:
@@ -300,6 +325,7 @@ Template Used: Dimension by HTML5 UP
                     }
 
                     function myFunction() {
+                        points = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] // reset points
                         document.getElementById("calculating").innerHTML = "Your Residence Rankings: ";
                         var list = "You Prefer: ";
                         var v1 = 0;
@@ -308,15 +334,15 @@ Template Used: Dimension by HTML5 UP
                         var mkv = 0;
                         var uwp = 0;
                         var clv = 1;
-                        var facc = "Your Faculty is: ";
-                        var fac = document.getElementById("faculty").value;
-                        if (fac == "na") {
-                            facc = facc + "Unspecified";
-                        }
-                        else {
-                            facc = facc + " " + fac;
-                        }
-                        document.getElementById('facultydisplay').innerHTML = facc;
+                        // var facc = "Your Faculty is: ";
+                        // var fac = document.getElementById("faculty").value;
+                        // if (fac == "na") {
+                        //     facc = facc + "Unspecified";
+                        // }
+                        // else {
+                        //     facc = facc + " " + fac;
+                        // }
+                        // document.getElementById('facultydisplay').innerHTML = facc;
 
 
                         var meal = document.getElementById("mealPlan").value;
@@ -404,17 +430,33 @@ Template Used: Dimension by HTML5 UP
 
                         var eateryvalue = document.getElementById("eatery").value;
                         if (eateryvalue == "On-Site Eatery") {
-                            v1++;
-                            rev++;
-                            cmh++;
+                            addPoints([0,1,2,4,5,7,8], 3);
                         }
                         else {
-                            mkv++;
-                            uwp++;
-                            clv++;
+                            addPoints([3,6,9,10], 3);
                         }
 
                         features = features + eateryvalue;
+
+                        var washroomValue = document.getElementById("In-Suite Washroom").value;
+                        if (washroomValue == "Yes") {
+                            addPoints([3,4,5,6,7,8,9,10], 3);
+                        }
+                        else {
+                            addPoints([0,1,2], 3);
+                        }
+
+                        features = features + washroomValue;
+
+                        var kitchenValue = document.getElementById("kitchen").value;
+                        if (kitchenValue == "Yes") {
+                            addPoints([3,6,7,8,9,10], 3);
+                        }
+                        else {
+                            addPoints([0,1,2,4,5], 3);
+                        }
+
+                        features = features + kitchenValue;
 
                         var acvalue = document.getElementById("ac").value;
 
