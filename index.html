@@ -131,7 +131,7 @@ Template Used: Dimension by HTML5 UP
                 <!-- <form>
                     Which Faculty Are You Planning to Attend:
                     <select id="faculty">
-                        <option value="na">Doesn't Matter</option>
+                        <option value="N/A">Doesn't Matter</option>
                         <option value="Engineering">Engineering</option>
                         <option value="Math">Math</option>
                         <option value="Arts">Arts</option>
@@ -151,11 +151,19 @@ Template Used: Dimension by HTML5 UP
                     </select>
                 </form>
 
+                <form>
+                    Select Your Preferred Room Type:
+                    <select id="roomType">
+                        <option value="Single Rooms">Single Rooms</option>
+                        <option value="Double Rooms">Double Rooms</option>
+                    </select>
+                </form>
+
                 <!-- done -->
                 <form>
                     Select Your Preferred Meal Plan:
                     <select id="mealPlan">
-                        <option value="na">Doesn't Matter</option>
+                        <option value="N/A">Doesn't Matter</option>
                         <option value="mandatory">Mandatory Meal Plan</option>
                         <option value="optional">Optional or No Meal Plan</option>
                     </select>
@@ -174,7 +182,7 @@ Template Used: Dimension by HTML5 UP
                 <form>
                     In-Suite Washroom:
                     <select id="In-Suite Washroom">
-                        <option value="Yes">Yes</option>
+                        <option value="In-Suite Washroom">Yes</option>
                         <option value="No">No</option>
                     </select>
                 </form>
@@ -182,7 +190,7 @@ Template Used: Dimension by HTML5 UP
                 <form>
                     In-Suite Kitchen:
                     <select id="kitchen">
-                        <option value="Yes">Yes</option>
+                        <option value="In-Suite Kitchen">Yes</option>
                         <option value="No">No</option>
                     </select>
                 </form>
@@ -193,55 +201,46 @@ Template Used: Dimension by HTML5 UP
                 <form>
                     Select Your Preferred Bed Size:
                     <select id="suiteType">
-                        <option value="na">N/A</option>
                         <option value="Single">Single</option>
                         <option value="Double">Double</option>
                     </select>
-                    <p>*Single-size bed with mattress of 203cm (80”) long by 91cm (36”) wide; Double-size bed with
-                        mattress of 203cm (80”) long by 137cm (54”) wide.
-                    </p>
+                    
                 </form>
 
 
-                <form>
-                    Select Your Preferred Room Type:
-                    <select id="roomType">
-                        <option value="Single Rooms">Single Rooms</option>
-                        <option value="Double Rooms">Double Rooms</option>
-                    </select>
-                </form>
+                
 
-                <form>
+                <!-- <form>
                     If You Chose Double Room, Select Your Preferred Room Type:
                     <select id="doubleType">
-                        <option value="na">N/A </option>
+                        <option value="N/A">N/A </option>
                         <option value="normal">Normal Double Rooms</option>
                         <option value="Semi-Private Double Rooms">Semi-Private Double Rooms</option>
                         <option value="Interconnecting Rooms">Interconnecting Rooms</option>
                     </select>
-                </form>
-
+                </form> -->
+<!-- 
                 <form>
                     Select Your Preferred Floor Type:
                     <select id="floorType">
                         <option value="Single-Gender Floors">Single-Gender Floors</option>
                         <option value="Co-ed Floors">Co-ed Floors</option>
                     </select>
-                </form>
+                </form> -->
 
-                <h4>Features and Amenities(Skip if not necessary): </h4>
+                <!-- <h4>Features and Amenities(Skip if not necessary): </h4> -->
 
                 
 
                 <form>
                     Air Conditioning:
                     <select id="ac">
-                        <option value="no">No</option>
                         <option value="Air Conditioning">Yes</option>
+                        <option value="no">No</option>
                     </select>
                 </form>
 
-                <form>
+                <!-- <form>
                     On-Site Fitness Room:
                     <select id="fitness">
                         <option value="no">No</option>
@@ -255,7 +254,7 @@ Template Used: Dimension by HTML5 UP
                         <option value="no">No</option>
                         <option value="On-Site Music/Multi-Faith Room">Yes</option>
                     </select>
-                </form>
+                </form> -->
 
                 <center>
                     <p>Click the button for Mr. Goose to suggest you a residence.</p>
@@ -308,6 +307,9 @@ Template Used: Dimension by HTML5 UP
                     up-to-date and complete information regarding your First-Year residence choices before coming to a
                     conclusion. Thank you for visiting!</p>
 
+                    <p>*Single-size bed with mattress of 203cm (80”) long by 91cm (36”) wide; Double-size bed with
+                        mattress of 203cm (80”) long by 137cm (54”) wide.
+                    </p>
 
 
                 <script>
@@ -336,7 +338,7 @@ Template Used: Dimension by HTML5 UP
                         var clv = 1;
                         // var facc = "Your Faculty is: ";
                         // var fac = document.getElementById("faculty").value;
-                        // if (fac == "na") {
+                        // if (fac == "N/A") {
                         //     facc = facc + "Unspecified";
                         // }
                         // else {
@@ -395,35 +397,35 @@ Template Used: Dimension by HTML5 UP
 
 
 
-                        var doubleTypeV = document.getElementById("doubleType").value;
-                        if (doubleTypeV == "na" || doubleTypeV == "normal") {
-                            v1++;
-                            rev++;
-                            uwp++;
-                        }
-                        else {
-                            if (doubleTypeV == "Semi-Private Double Rooms") {
-                                cmh++;
-                            }
-                            else if (doubleTypeV == "Interconnecting Rooms	") {
-                                v1++;
-                            }
-                            list = list + ", " + doubleTypeV;
+                        // var doubleTypeV = document.getElementById("doubleType").value;
+                        // if (doubleTypeV == "N/A" || doubleTypeV == "normal") {
+                        //     v1++;
+                        //     rev++;
+                        //     uwp++;
+                        // }
+                        // else {
+                        //     if (doubleTypeV == "Semi-Private Double Rooms") {
+                        //         cmh++;
+                        //     }
+                        //     else if (doubleTypeV == "Interconnecting Rooms	") {
+                        //         v1++;
+                        //     }
+                        //     list = list + ", " + doubleTypeV;
 
-                        }
+                        // }
 
-                        var fl = document.getElementById("floorType").value;
-                        if (fl == "Single-Gender Floor") {
-                            v1++;
-                            clv++;
-                        }
-                        else {
-                            rev++;
-                            cmh++;
-                            mkv++;
-                            uwp++;
-                        }
-                        list = list + ", " + fl;
+                        // var fl = document.getElementById("floorType").value;
+                        // if (fl == "Single-Gender Floor") {
+                        //     v1++;
+                        //     clv++;
+                        // }
+                        // else {
+                        //     rev++;
+                        //     cmh++;
+                        //     mkv++;
+                        //     uwp++;
+                        // }
+                        // list = list + ", " + fl;
 
                         // features
                         var features = "Your Preferred Features and Amenities: ";
@@ -439,53 +441,54 @@ Template Used: Dimension by HTML5 UP
                         features = features + eateryvalue;
 
                         var washroomValue = document.getElementById("In-Suite Washroom").value;
-                        if (washroomValue == "Yes") {
+                        if (washroomValue == "In-Suite Washroom") {
                             addPoints([3,4,5,6,7,8,9,10], 3);
+                            features = features + ', ' + washroomValue;
                         }
                         else {
                             addPoints([0,1,2], 3);
                         }
 
-                        features = features + washroomValue;
+                        
 
                         var kitchenValue = document.getElementById("kitchen").value;
-                        if (kitchenValue == "Yes") {
+                        if (kitchenValue == "In-Suite Kitchen") {
                             addPoints([3,6,7,8,9,10], 3);
+                            features = features + ', ' + kitchenValue;
                         }
                         else {
                             addPoints([0,1,2,4,5], 3);
                         }
 
-                        features = features + kitchenValue;
+                        
 
                         var acvalue = document.getElementById("ac").value;
 
                         if (acvalue == "no") {
-
+                                addPoints([3,9], 3)
                         }
                         else {
-                            cmh++;
-                            mkv++;
+                            addPoints([0,1,2,4,5,6,7,8,10], 3)
                             features = features + ", " + acvalue;
                         }
 
-                        var fit = document.getElementById("fitness").value;
+                        // var fit = document.getElementById("fitness").value;
 
-                        if (fit == "no") {
+                        // if (fit == "no") {
 
-                        }
-                        else {
-                            rev++; cmh++;
-                            features = features + ", " + fit;
-                        }
+                        // }
+                        // else {
+                        //     rev++; cmh++;
+                        //     features = features + ", " + fit;
+                        // }
 
-                        var mus = document.getElementById("music").value;
+                        // var mus = document.getElementById("music").value;
 
-                        if (mus == "no") { }
-                        else {
-                            cmh++; v1++;
-                            features = features + ", " + mus;
-                        }
+                        // if (mus == "no") { }
+                        // else {
+                        //     cmh++; v1++;
+                        //     features = features + ", " + mus;
+                        // }
 
 
                         document.getElementById('demo').innerHTML = list;
@@ -494,30 +497,7 @@ Template Used: Dimension by HTML5 UP
                         
 
                         var myArray = [];
-                        var v1array = {
-                            name: "V1",
-                            score: v1
-                        };
-                        var revarray = {
-                            name: "REV",
-                            score: rev
-                        };
-                        var cmharray = {
-                            name: "CMH",
-                            score: cmh
-                        };
-                        var mkvarray = {
-                            name: "MKV",
-                            score: mkv
-                        };
-                        var uwparray = {
-                            name: "UWP",
-                            score: uwp
-                        };
-                        var clvarray = {
-                            name: "CLV",
-                            score: clv
-                        };
+                       
 
                         console.log(buildings)
                         console.log(points)
@@ -569,7 +549,7 @@ Template Used: Dimension by HTML5 UP
 
 
                         myArray.sort(compare);
-                        var first = myArray.pop()
+                        var first = myArray.at(0)
                         var firstChoice = first.name;
                         var firstString = "Mr. Goose suggests you to check out: " + firstChoice + "! ";
                         var resdes = "";
