@@ -251,7 +251,7 @@ Template Used: Dimension by HTML5 UP
                 </form> -->
 
                 <center>
-                    <p>Click the button for Mr. Goose to suggest you a residence.</p>
+                    <p>Click the button for us to suggest you a residence.</p>
 
                     <button class="button-hover" onclick="myFunction()">
                         <span id="calcbutton" STYLE="font-family:'Source Sans Pro'">Calculate!
@@ -298,11 +298,11 @@ Template Used: Dimension by HTML5 UP
 
                 <span class="image main"><img src="bg.png" alt="campus" /></span>
 
-                <p id="reference"><strong>Please refer to Waterloo's <a
-                            href="https://uwaterloo.ca/housing/residences/compare-residences">Compare Residences
-                            page</a> to review the suggestions calculated by Mr. Goose.</strong> The Residence Rankings
+                <p id="reference"><strong>Please refer to Western's <a
+                            href="https://residence.uwo.ca/buildings/comparison.pdf">Compare Residences
+                            page</a> to review the suggestions calculated by this site.</strong> The Residence Rankings
                     calculated on this website are only based on the recorded responses. It does not take into account
-                    the importance of certain preferences. Thus, please review Waterloo's webpage as well for the most
+                    the importance of certain preferences. Thus, please review Western's webpage as well for the most
                     up-to-date and complete information regarding your First-Year residence choices before coming to a
                     conclusion. Thank you for visiting!</p>
 
@@ -329,12 +329,7 @@ Template Used: Dimension by HTML5 UP
                         points = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] // reset points
                         document.getElementById("calculating").innerHTML = "Your Residence Rankings: ";
                         var list = "You Prefer: ";
-                        var v1 = 0;
-                        var rev = 0;
-                        var cmh = -1;
-                        var mkv = 0;
-                        var uwp = 0;
-                        var clv = 1;
+        
                         // var facc = "Your Faculty is: ";
                         // var fac = document.getElementById("faculty").value;
                         // if (fac == "N/A") {
@@ -553,12 +548,12 @@ Template Used: Dimension by HTML5 UP
 
                         var first = myArray.at(0)
                         var firstChoice = first.name;
-                        var firstString = "Mr. Goose suggests you to check out: " + firstChoice + "! ";
+                        var firstString = "We suggests you to check out: " + firstChoice + "! ";
                         var resdes = "";
 
                         switch (firstChoice) {
                             case "V1":
-                                resdes = "Village 1 (V1) was the first residence built for students at the University of Waterloo. With a long history, it is here where many first-year students will call home.";
+                                resdes = "Village 1 (V1) was the first residence built for students at the University of Western. With a long history, it is here where many first-year students will call home.";
                                 break;
                             case "REV":
                                 resdes = "Ron Eydt Village (REV) is a first-year exclusive residence, with plenty of social and academic programming to make your first year in residence a memorable one!";
@@ -571,7 +566,7 @@ Template Used: Dimension by HTML5 UP
                                 resdes = "Mackenzie King Village (MKV) offers the privacy of having a single room combined with the social benefits of living in a shared suite. Students also have a kitchen in their suite to prepare their own meals.";
                                 break;
                             case "UWP":
-                                resdes = "UW Place (UWP) is centrally located to campus, Waterloo Park, a new LRT station, and University Plaza. Students living at UWP enjoy the independence and privacy of their own room, combined with the perks of apartment living.";
+                                resdes = "UW Place (UWP) is centrally located to campus, Western Park, a new LRT station, and University Plaza. Students living at UWP enjoy the independence and privacy of their own room, combined with the perks of apartment living.";
                                 break;
                             case "CLV":
                                 resdes = "Columbia Lake Village South (CLV-South) is a vibrant community with a diverse population of students in different stages of their academic career. Rooms are fully furnished.";
