@@ -94,10 +94,9 @@ Template Used: Dimension by HTML5 UP
             <div class="content">
                 <div class="inner">
                     <h1 style="padding: 10px;
-                                   background: rgba(0, 0, 0, 0.6);">Western Residence Quiz<em>&#x2122</em>
-                        &#129414&#129442</h1>
+                                   background: rgba(0, 0, 0, 0.6);">Western Residence Quiz</h1>
                     <h3 style="padding: 10px;
-                                     background: rgba(0, 0, 0, 0.6);">Unsure on which residence to choose? <br>Let us help!</h3>
+                                     background: rgba(0, 0, 0, 0.6);">Unsure about which Western Residence to choose? <br>Let us help!</h3>
          
                 </div>
             </div>
@@ -266,12 +265,17 @@ Template Used: Dimension by HTML5 UP
                     <h2 style="padding: 0px;" id="calculating"></h2>
                 </em>
 
-                <h1 id="first"></h1>
-                <h2 id="second"></h2>
-                <h3 id="third"></h3>
-                <h4 id="fourth"></h4>
-                <h5 id="fifth"></h5>
-                <h6 id="sixth"></h6>
+                <h1 id="1"></h1>
+                <h2 id="2"></h2>
+                <h2 id="3"></h2>
+                <h3 id="4"></h3>
+                <h3 id="5"></h3>
+                <h3 id="6"></h3>
+                <h4 id="7"></h4>
+                <h4 id="8"></h4>
+                <h4 id="9"></h4>
+                <h4 id="10"></h4>
+                <h4 id="11"></h4>
 
                 <strong>
                     <p id="firstdescription"></p>
@@ -522,8 +526,8 @@ Template Used: Dimension by HTML5 UP
                         console.log(myArray);
                         console.log(myArray.at(0));
 
-                        var sortedRes = myArray;
-
+                        var sortedRes = myArray.sort(compare);
+                        console.log(sortedRes, "sortedRes")
                         let residencePrint = "";
                         for (const i in points) {
                             residencePrint += sortedRes[i].name + ': ';
@@ -533,17 +537,20 @@ Template Used: Dimension by HTML5 UP
 
 
 
-                        document.getElementById('first').innerHTML = "1. " + myArray.at(0).name;
-                        document.getElementById('second').innerHTML = "2. " + myArray.at(1).name;
-                        document.getElementById('third').innerHTML = "3. " + myArray.at(2).name;
-                        document.getElementById('fourth').innerHTML = "4. " + myArray.at(3).name;
-                        document.getElementById('fifth').innerHTML = "5. " + myArray.at(4).name;
-                        document.getElementById('sixth').innerHTML = "6. " + myArray.at(5).name;
+                        for (var i = 0; i < points.length; i++) {
+                            var str = (i + 1).toString();
+                            console.log(str);
+                            try {
+                                document.getElementById(str).innerHTML = str + ". " + myArray.at(i).name + " (" + myArray.at(i).score + ")";
+
+                            } catch (error) {
+                                
+                            }
+                        }
 
 
 
 
-                        myArray.sort(compare);
                         var first = myArray.at(0)
                         var firstChoice = first.name;
                         var firstString = "Mr. Goose suggests you to check out: " + firstChoice + "! ";
